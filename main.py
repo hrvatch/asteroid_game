@@ -44,11 +44,10 @@ def main():
                     pygame.quit()
                     return
 
-
         screen.fill((20, 25, 35))
 
         for asteroid in asteroids:
-            if player.collides(asteroid):
+            if asteroid.collides(player):
                 print("Game over!")
                 pygame.quit()
                 return
